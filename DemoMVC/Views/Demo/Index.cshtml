@@ -1,0 +1,17 @@
+﻿@model IEnumerable<AutoModel>
+
+<table>
+    <tr>
+        <th>Merk</th>
+        <th>Type</th>
+        <th>Kmstand</th>
+    </tr>
+    @foreach (AutoModel autoModel in Model)
+    {
+        <tr>
+            <td>@autoModel.Merk</td>
+            <td>@autoModel.Type</td>
+            <td>@autoModel.KilometerStand</td>
+        </tr>
+    }
+</table>
