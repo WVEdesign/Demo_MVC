@@ -1,0 +1,35 @@
+﻿<h1>Fietsen</h1>
+
+@model IEnumerable<FietsModel>
+
+
+
+<div class="container-fluid">
+    <table class="table-light table-bordered  d-block table d-lg-table-cell align-middle">
+
+        <tr class="table-secondary">
+            <th>Foto</th>
+            <th>SKU</th>
+            <th>Naam</th>
+            <th>Prijs</th>
+            <th>Merk</th>
+            <th>Type</th>
+            <th>KaderGrootte</th>
+            <th>Details</th>
+        </tr>
+        @foreach (FietsModel fietsModel in Model)
+        {
+    <tr>
+        @*<td><img class="img-thumbnail" alt="bike" src="images/bikes/koers-team-bikes-1.jpg" /></td>*@
+        <td><img class="img-thumbnail" alt="bike" src="@fietsModel.Foto" /></td>
+        <td><a>33500</a>@fietsModel.Id</td>
+        <td>@fietsModel.Naam</td>
+        <td><a>EUR</a>@fietsModel.Prijs</td>
+        <td>@fietsModel.Merk</td>
+        <td>@fietsModel.Type</td>
+        <td>@fietsModel.Maat<a>inch</a></td>
+        <td>@Html.ActionLink("Show Details", "Detail", new { id = fietsModel.Id }, new { @class = "btn btn-info btn-sm" })</td>
+    </tr>
+        }
+    </table>
+</div>

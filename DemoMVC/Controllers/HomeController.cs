@@ -20,7 +20,7 @@ namespace DemoMVC.Controllers
 
         public IActionResult Index()
         {
-            ViewData["Title"] = "Landigspagina";
+            ViewData["Title"] = "Welcome Bike enthousiast";
             return View();
         }
 

@@ -12,21 +12,21 @@ namespace DemoMVC.Controllers
     {
         public IActionResult Index(int id)
         {
-            AutoModel autoModel = new AutoModel();
-            autoModel.KilometerStand = 150000;
-            autoModel.Merk = "Toyota";
-            autoModel.Type = "Auris";
+            FietsModel fietsModel = new FietsModel();
+            fietsModel.Maat = 150000;
+            fietsModel.Merk = "Toyota";
+            fietsModel.Type = "Auris";
 
-            AutoModel autoModel2 = new AutoModel();
-            autoModel2.KilometerStand = 20;
-            autoModel2.Merk = "BMW";
-            autoModel2.Type = "109D";
+            FietsModel fietsModel2 = new FietsModel();
+            fietsModel2.Maat = 20;
+            fietsModel2.Merk = "BMW";
+            fietsModel2.Type = "109D";
 
-            List<AutoModel> autolijst = new List<AutoModel>();
-            autolijst.Add(autoModel2);
-            autolijst.Add(autoModel);
+            List<FietsModel> fietslijst = new List<FietsModel>();
+            fietslijst.Add(fietsModel2);
+            fietslijst.Add(fietsModel);
 
-            return View(autolijst);
+            return View(fietslijst);
         }
     }
 }

@@ -1,18 +1,19 @@
-﻿@model IEnumerable<AutoModel>
+﻿@model IEnumerable<FietsModel>
 
 <table>
+   
     <tr>
         <th>Merk</th>
         <th>Type</th>
-        <th>Kmstand</th>
+        <th>KaderGrootte</th>
         <p>Wouter is here</p>
     </tr>
-    @foreach (AutoModel autoModel in Model)
+    @foreach (FietsModel fietsModel in Model)
     {
         <tr>
-            <td>@autoModel.Merk</td>
-            <td>@autoModel.Type</td>
-            <td>@autoModel.KilometerStand</td>
+            <td>@fietsModel.Merk</td>
+            <td>@fietsModel.Type</td>
+            <td>@fietsModel.Maat</td>
         </tr>
     }
 </table>
