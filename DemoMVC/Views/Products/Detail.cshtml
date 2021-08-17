@@ -2,4 +2,13 @@
 
 <h1>@Model.Naam - @Model.Type</h1>
 <br />
-<img  alt="bike" src="/@Model.Foto" />
+<img alt="bike" src="/@Model.Foto" />
+
+<p>
+    <em>Quantity:</em>
+    @Html.TextBox("qty")
+</p>
+
+<p>
+    <input type="submit" value="Add to cart" class="btn-success" />
+</p>
