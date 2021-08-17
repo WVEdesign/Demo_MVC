@@ -51,7 +51,9 @@
     @Html.ActionLink("Go to PoductPage", "Index", "Products", null, new { @class = "btn btn-primary btn-lg btn-block" })
 </div>
 <hr>
-<div>Lucky Bike of the day (todo)</div>
+<div>Lucky Bike of the day</div>
+<h1>@ViewData["Random"]</h1>
+<img alt="randombike" src="/images/randomBikes/@ViewData["Random"]b.jpg" />
 <hr>
 <br>
 <br>

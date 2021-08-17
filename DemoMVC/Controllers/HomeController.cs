@@ -13,6 +13,12 @@ namespace DemoMVC.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        private static Random random;
+
+        static HomeController()
+        {
+            random = new Random();
+        }
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -21,6 +27,7 @@ namespace DemoMVC.Controllers
         public IActionResult Index()
         {
             ViewData["Title"] = "Welcome Bike enthousiast";
+            ViewData["Random"] = random.Next(1, 7);
             return View();
         }
 
@@ -34,6 +41,9 @@ namespace DemoMVC.Controllers
             ViewData["Time"] = DateTime.Now;
             return View();
         }
+
+      
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
